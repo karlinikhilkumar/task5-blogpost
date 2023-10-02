@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.blog-title {
+    font-size: 40px;
+}
+
+.blog-content {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: rgb(192, 212, 255);
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: rgb(192, 212, 255);
+}
+
+.author img {
+    max-width: 150px;
+    height: 200px;
+   
+    margin-right: 20px;
+
+    
+}
+
+.comments {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: rgb(192, 212, 255);
+}
+
+.comment {
+   
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.add-comment {
+    margin: 20px;
+    padding: 20px ;
+    padding-bottom: 50px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: rgb(192, 212, 255);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: rgb(208, 221, 248);
+    border-style: none;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 40px;
+    left: -1150px;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="blog-title">the ramayan</h1>
+    </header>
+    <article class="blog-content">
+        <img src="data:image/jpeg;base64,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" alt="">
+
+        <h2>A brief summary of the Ramayana</h2>
+        <p>
+            Sita
+            Rama, prince of Ayodhya, won the hand of the beautiful princess Sita (seen here), but was exiled with her and his brother Laksmana for 14 years through the plotting of his stepmother. In the forest Sita was abducted by Ravana, and Rama gathered an army of monkeys and bears to search for her. The allies attacked Lanka, killed Ravana, and rescued Sita. In order to prove her chastity, Sita entered fire, but was vindicated by the gods and restored to her husband. After the couple's triumphant return to Ayodhya, Rama's righteous rule (Ram-raj) inaugurated a golden age for all mankind.
+            
+            Characters of the Ramayana
+            Rama is the hero of the Ramayana epic, an incarnation of the God Vishnu. The eldest and favourite son of Dasaratha, King of Ayodhya, he is a virtuous prince and is much loved by the people. He is exiled from Ayodhya due to the plotting of his stepmother, Kaikeyi.
+            
+            Sita is Rama's wife and daughter of King Janaka of Mithila. Sita is the epitome of womanly purity and virtue.
+            
+            Lakshmana with bow
+            Laksmana (seen here) is Rama's younger brother. Completely loyal to Rama, he chooses to go with Rama and Sita when they are exiled from Ayodhya.
+            
+             
+            
+             
+            
+            Ravana is the king of Lanka and has 10 heads and 20 arms. He received a boon from the God Brahma that he cannot be killed by gods, demons or by spirits, after performing a severe penance for 10,000 years. After receiving his reward from Brahma, Ravana began to lay waste to the earth and disturbed the deeds of the good Hindu sages. Vishnu incarnates as the human Rama to defeat him, assisted by an army of monkeys and bears, thus circumventing the boon given by Brahma.
+            
+            Dasaratha is the King of Ayodhya, Rama's father.
+            
+            Kausalya is Rama's mother, Dasaratha's chief wife.
+            
+            Kaikeyi is Dasaratha's wife and Rama's stepmother. She demands that Rama be banished to the forest and that her son Bharata be awarded the kingdom instead.
+            
+            Bharata is the second son of Dasaratha. When he learns that his mother Kaikeyi had forced Rama into exile, causing Dasaratha to die broken hearted, he storms out of the palace and goes in search of Rama. When Rama refuses to return from his exile to assume the throne, Bharata obtains Rama's sandals and places them on the throne as a gesture that Rama is the true king.
+            
+            Sumitra is Dasharatha's wife and mother of the twins Lakshmana and Satrughna.
+            
+            Hanuman is the wise and resourceful monkey who helps Rama in his quest to defeat Ravana and rescue Sita.
+            
+            Sugriva is the ruler of the monkey kingdom. His throne was taken by his brother Bali, but Rama helps him to defeat the usurper in return for his assistance in finding Sita.</p>
+       
+    </article>
+    <section class="author-info ">
+        <div class="author">
+            <img src="https://static.toiimg.com/thumb/msid-94733492,imgsize-24086,width-400,resizemode-4/94733492.jpg" alt="Author's Profile Picture">
+        </div>
+        <div class="author-bio">
+            <h2>About the Author</h2>
+            <h3>valmiki</h3>
+            <p>Valmiki was a legendary poet who is celebrated as the traditional author of the epic Ramayana, based on the attribution in the text itself. He is revered as Ādi Kavi, the first poet, author of Ramayana, the first epic poem. The Ramayana, originally written by Valmiki, consists of 24,000 shlokas and seven cantos.</p>
+        </div>
+    </section>
+   
+    <section class="add-comment">
+        
+            <h2>Comments</h2>
+            <div class="comment">
+                <div class="comment-author">k nikhil kumar</div>
+                <div class="comment-timestamp">Posted on: October 2, 2023</div>
+                <p>This is a great blog post! i have read it.</p>
+            </div>
+            
+      
+        <h2>Add a Comment</h2>
+        <form>
+            <label for="commenter-name">Name:</label>
+            <input type="text" id="commenter-name" name="commenter-name" required>
+            <label for="comment-content">Comment:</label>
+            <textarea id="comment-content" name="comment-content" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
